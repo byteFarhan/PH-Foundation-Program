@@ -38,3 +38,21 @@ const validateUsername = (userName) => {
   }
   return "Available";
 };
+
+//Question No. 3
+const getCngFare = (distance, isNight, waitingMinutes) => {
+  let fare = 50;
+  const minFareKM = 2;
+  const extraKMFare = 15;
+  const waitingChargePerMin = 2;
+  if (distance > 2) {
+    fare += extraKMFare * (distance - minFareKM);
+  }
+  if (waitingMinutes) {
+    fare += waitingMinutes * waitingChargePerMin;
+  }
+  if (isNight) {
+    fare += fare * 0.2;
+  }
+  return fare;
+};

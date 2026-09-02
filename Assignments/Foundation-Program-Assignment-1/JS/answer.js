@@ -39,7 +39,7 @@ const validateUsername = (userName) => {
   return "Available";
 };
 
-//Question No. 3
+//Question No. 4
 const getCngFare = (distance, isNight, waitingMinutes) => {
   let fare = 50;
   const minFareKM = 2;
@@ -55,4 +55,27 @@ const getCngFare = (distance, isNight, waitingMinutes) => {
     fare += fare * 0.2;
   }
   return fare;
+};
+
+//Question No. 5
+const getChaseVerdict = (target, scored, ballsLeft) => {
+  let chaseVerdict;
+  const runsNeeded = target - scored;
+  const requiredRate = (runsNeeded / ballsLeft) * 6;
+  if (runsNeeded <= 0) {
+    chaseVerdict = "Won";
+  } else if (ballsLeft <= 0) {
+    chaseVerdict = "Lost";
+  } else if (requiredRate) {
+    let winProbability =
+      requiredRate <= 6
+        ? "Comfortable"
+        : requiredRate > 6 && requiredRate <= 12
+          ? "Tough"
+          : requiredRate > 12 && "Almost Impossible";
+
+    chaseVerdict = `Need ${runsNeeded} runs in ${ballsLeft} balls | ${winProbability}`;
+  }
+
+  return chaseVerdict;
 };

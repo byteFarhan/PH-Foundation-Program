@@ -18,7 +18,7 @@ export default function NavbarComp() {
         </span>
       </NavbarBrand>
       <div className="flex md:order-2">
-        <Button className="cursor-pointer">All Movies</Button>
+        <Button className="cursor-pointer">Movies</Button>
         <NavbarToggle />
       </div>
       <NavbarCollapse>

@@ -61,19 +61,18 @@ const getCngFare = (distance, isNight, waitingMinutes) => {
 const getChaseVerdict = (target, scored, ballsLeft) => {
   let chaseVerdict;
   const runsNeeded = target - scored;
-  const requiredRate = (runsNeeded / ballsLeft) * 6;
   if (runsNeeded <= 0) {
     chaseVerdict = "Won";
   } else if (ballsLeft <= 0) {
     chaseVerdict = "Lost";
-  } else if (requiredRate) {
+  } else {
+    const requiredRate = (runsNeeded / ballsLeft) * 6;
     let winProbability =
       requiredRate <= 6
         ? "Comfortable"
-        : requiredRate > 6 && requiredRate <= 12
+        : requiredRate <= 12
           ? "Tough"
           : requiredRate > 12 && "Almost Impossible";
-
     chaseVerdict = `Need ${runsNeeded} runs in ${ballsLeft} balls | ${winProbability}`;
   }
 

@@ -6,11 +6,13 @@ import {
   NavbarLink,
   NavbarToggle,
 } from "flowbite-react";
+import logo from "../assets/logo.svg";
 
 export default function NavbarComp() {
   return (
     <Navbar fluid className="dark:bg-gray-900">
       <NavbarBrand href="#">
+        <img src={logo} className="mr-3 h-6 sm:h-9" alt="Flowbite React Logo" />
         <span className="self-center whitespace-nowrap text-xl font-semibold text-blue-500 dark:text-white">
           Movie Studio
         </span>

@@ -1,7 +1,9 @@
+import NavbarComp from "./components/NavbarComp";
+
 export default function App() {
   return (
-    <>
-      <h1 className="text-red-500">Hello World!</h1>
-    </>
+    <main className="bg-gray-800 min-h-screen">
+      <NavbarComp />
+    </main>
   );
 }

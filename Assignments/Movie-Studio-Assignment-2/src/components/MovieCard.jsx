@@ -5,9 +5,8 @@ import { FaStar } from "react-icons/fa6";
 import { HiMiniCalendarDateRange } from "react-icons/hi2";
 
 export default function MovieCard({ movie }) {
-  const { score, show } = movie;
   const { id, url, name, type, language, rating, image, summary, premiered } =
-    show;
+    movie;
   const [showModal, setShowModal] = useState(false);
   const [movieToShow, setMovieToShow] = useState(null);
   const handleShowModal = (theMovie) => {

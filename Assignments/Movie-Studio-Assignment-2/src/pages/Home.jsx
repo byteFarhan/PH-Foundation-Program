@@ -32,7 +32,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 container gap-6">
           {girlsShow?.length > 0 &&
             girlsShow.map((item) => (
-              <MovieCard key={item?.show?.id} movie={item} />
+              <MovieCard key={item?.show?.id} movie={item?.show} />
             ))}
         </div>
         <div className="mt-8 gap-3 flex flex-col sm:flex-row justify-center">

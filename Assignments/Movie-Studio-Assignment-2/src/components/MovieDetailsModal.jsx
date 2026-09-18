@@ -1,9 +1,8 @@
 import { Button, Modal } from "flowbite-react";
 
 export default function MovieDetailsModal({ movie, showModal, onClose }) {
-  const { score, show } = movie;
   const { id, url, name, type, language, rating, image, summary, premiered } =
-    show;
+    movie;
   return (
     <>
       <Modal show={showModal} onClose={onClose} className="">

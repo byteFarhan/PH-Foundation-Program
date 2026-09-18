@@ -7,8 +7,10 @@ import {
   NavbarToggle,
 } from "flowbite-react";
 import logo from "../assets/logo.svg";
+import { useNavigate } from "react-router";
 
 export default function NavbarComp() {
+  const navigate = useNavigate();
   return (
     <Navbar fluid className="dark:bg-gray-900">
       <NavbarBrand href="#">
@@ -18,7 +20,12 @@ export default function NavbarComp() {
         </span>
       </NavbarBrand>
       <div className="flex md:order-2">
-        <Button className="cursor-pointer">Movies</Button>
+        <Button
+          onClick={() => navigate("/all-movies")}
+          className="cursor-pointer"
+        >
+          Movies
+        </Button>
         <NavbarToggle />
       </div>
       <NavbarCollapse>

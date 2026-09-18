@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 export default function HeroComp() {
   return (
     <>
@@ -31,9 +33,9 @@ export default function HeroComp() {
               </div>
               {/* Button */}
               <div className="mt-8 gap-3 flex flex-col sm:flex-row justify-center">
-                <a
+                <Link
+                  to={"/all-movies"}
                   className="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg bg-primary border border-primary-line text-primary-foreground hover:bg-primary-hover focus:outline-hidden focus:bg-primary-hover disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:border-white w-1/2 md:w-auto mx-auto"
-                  href="#"
                 >
                   Explore Now
                   <svg
@@ -50,7 +52,7 @@ export default function HeroComp() {
                   >
                     <path d="m9 18 6-6-6-6" />
                   </svg>
-                </a>
+                </Link>
               </div>
               {/* End Buttons */}
             </div>

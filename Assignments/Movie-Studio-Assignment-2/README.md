@@ -1,16 +1,103 @@
-# React + Vite
+# 🎬 Movie Studio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern web application built with **React** and **Tailwind CSS v4** that allows users to search, explore, and discover movies, TV shows, and series.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Features
 
-## React Compiler
+- **Search & Discovery:** Instantly search through thousands of movies and TV shows.
+- **Detailed Views:** Browse cast information, plot summaries, and streaming details.
+- **Modern UI:** Styled using Tailwind CSS and Flowbite React for a responsive, sleek experience.
+- **Seamless Navigation:** Client-side routing powered by React Router.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend Library:** [React 19](https://react.dev/)
+- **Build Tool:** [Vite](https://vitejs.dev/)
+- **Routing:** [React Router v8](https://reactrouter.com/)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/) & [@tailwindcss/vite](https://tailwindcss.com/docs/vite)
+- **UI Components:** [Flowbite React](https://flowbite-react.com/)
+- **Icons:** [React Icons](https://react-icons.github.io/react-icons/)
+
+---
+
+## 💻 Getting Started Locally
+
+Follow these steps to run the project locally on your machine.
+
+### **Prerequisites**
+
+Ensure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (v18.x or higher recommended)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+
+---
+
+### **Installation & Setup**
+
+1. **Clone the Repository**
+
+   ```bash
+   git clone --depth 1 --filter=blob:none --sparse https://github.com/byteFarhan/PH-Foundation-Program.git
+   cd PH-Foundation-Program
+   git sparse-checkout set Assignments/Movie-Studio-Assignment-2
+   cd Assignments/Movie-Studio-Assignment-2
+   ```
+
+2. **Install Dependencies**
+
+   ```bash
+   npm install
+   ```
+
+3. **Start the Development Server**
+
+   ```bash
+   npm run dev
+   ```
+
+4. **View in Browser**
+   Open your browser and navigate to `http://localhost:5173` (or the URL provided in your terminal).
+
+---
+
+## 📦 Build for Production
+
+To create an optimized production build:
+
+```bash
+npm run build
+```
+
+To preview the production build locally:
+
+```bash
+npm run preview
+```
+
+---
+
+## 🌐 Deployment
+
+If deploying to **Vercel**, ensure you include a `vercel.json` file in your root directory to prevent 404 errors on route refresh:
+
+```json
+{
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
+```
+
+---
+
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE).

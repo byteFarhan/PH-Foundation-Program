@@ -6,19 +6,25 @@ import {
   NavbarLink,
   NavbarToggle,
 } from "flowbite-react";
+import { Link, useNavigate } from "react-router";
 import logo from "../assets/logo.svg";
-import { useNavigate } from "react-router";
 
 export default function NavbarComp() {
   const navigate = useNavigate();
   return (
     <Navbar fluid className="dark:bg-gray-900">
-      <NavbarBrand href="#">
-        <img src={logo} className="mr-3 h-6 sm:h-9" alt="Flowbite React Logo" />
-        <span className="self-center whitespace-nowrap text-xl font-semibold text-blue-500 dark:text-white">
-          Movie Studio
-        </span>
-      </NavbarBrand>
+      <Link to={"/"}>
+        <div className="flex">
+          <img
+            src={logo}
+            className="mr-3 h-6 sm:h-9"
+            alt="Flowbite React Logo"
+          />
+          <span className="self-center whitespace-nowrap text-xl font-semibold text-blue-500 dark:text-white">
+            Movie Studio
+          </span>
+        </div>
+      </Link>
       <div className="flex md:order-2">
         <Button
           onClick={() => navigate("/all-movies")}
@@ -29,9 +35,9 @@ export default function NavbarComp() {
         <NavbarToggle />
       </div>
       <NavbarCollapse>
-        <NavbarLink href="#" active>
+        <Link className="text-white" to={"/"} active>
           Home
-        </NavbarLink>
+        </Link>
         <NavbarLink href="#">About</NavbarLink>
         <NavbarLink href="#">Services</NavbarLink>
         <NavbarLink href="#">Pricing</NavbarLink>
